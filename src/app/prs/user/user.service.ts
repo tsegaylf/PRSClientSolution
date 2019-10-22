@@ -12,5 +12,9 @@ export class UserService {
   list(): Observable<User[]> {
     return this.http.get(`${baseUrl}`) as Observable<User[]>;
   }
+
+  get(id: string): Observable<User>{
+    return this.http.get(`${baseUrl}/${id}`) as Observable<User>;
+  }
   constructor(private http: HttpClient) { }
 }

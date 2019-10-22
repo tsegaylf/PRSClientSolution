@@ -1,17 +1,34 @@
-<h3>User List</h3>
-<table>
-  <tr>
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">USER LIST</span> |
+    <span class="createlink">
+      <a routerLink="/users/create">CREATE</a>
+    </span>
+  </div>
+
+  <table class="table table-sm">
+    <tr class="tableheader">
       <td>Id</td>
       <td>Username</td>
       <td>Full Name</td>
       <td>Reviewer</td>
       <td>Admin</td>
-  </tr>
-  <tr *ngFor = "let user of users">
-    <td>{{user.Id}}</td>
-    <td>{{user.Username}}</td>
-    <td>{{user.firstname}} {{user.lastname}}</td>
-    <td>{{user.isReviewer}}</td>
-    <td>{{user.isAdmin}}</td>
-  </tr>
-</table>
+      <td>Actions</td>
+    </tr>
+    <tr *ngFor = "let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.firstname}} {{user.lastname}}</td>
+      <td>{{user.isReviewer | bool}}</td>
+      <td>{{user.isAdmin | bool}}</td>
+      <td>
+        <span class="actions">
+          <a routerLink="/users/detail/{{user.id}}">DETAIL</a> |
+          <a routerLink="/users/edit/{{user.id}}">EDIT</a>
+        </span>
+      </td>
+    </tr>
+  </table>
+
+</div>
