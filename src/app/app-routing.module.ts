@@ -9,7 +9,7 @@ import { UserEditComponent } from './prs/user/user-edit/user-edit.component';
 import { FourOhFourComponent } from './core/four-oh-four/four-oh-four.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/user/list', pathMatch: 'full'}, //initial route
+  {path: '', redirectTo: '/users/list', pathMatch: 'full'}, //initial route
 
   {path: 'users/list', component: UserListComponent }, //regular route
   {path: 'users/create', component: UserCreateComponent },
