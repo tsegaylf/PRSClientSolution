@@ -36,7 +36,6 @@ export class UserDetailComponent implements OnInit {
     );
   }
 
-
   ngOnInit() {
     let userid = this.route.snapshot.params.id;
     this.usersvc.get(userid).subscribe(
@@ -49,5 +48,4 @@ export class UserDetailComponent implements OnInit {
       }
     );
   }
-
 }

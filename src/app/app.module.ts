@@ -11,6 +11,8 @@ import { FourOhFourComponent } from './core/four-oh-four/four-oh-four.component'
 import { UserDetailComponent } from './prs/user/user-detail/user-detail.component';
 import { UserCreateComponent } from './prs/user/user-create/user-create.component';
 import { UserEditComponent } from './prs/user/user-edit/user-edit.component';
+import { MenuComponent } from './core/menu/menu.component';
+import { MenuitemComponent } from './core/menuitem/menuitem.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserEditComponent } from './prs/user/user-edit/user-edit.component';
     FourOhFourComponent,
     UserDetailComponent,
     UserCreateComponent,
-    UserEditComponent
+    UserEditComponent,
+    MenuComponent,
+    MenuitemComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
