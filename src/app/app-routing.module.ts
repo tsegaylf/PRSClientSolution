@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { UserListComponent } from './prs/user/user-list/user-list.component';
 import { UserCreateComponent } from './prs/user/user-create/user-create.component';
 import { UserDetailComponent } from './prs/user/user-detail/user-detail.component';
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], 
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
