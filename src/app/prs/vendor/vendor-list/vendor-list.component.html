@@ -18,7 +18,7 @@
       <td>Phone</td>
       <td>Email</td>
     </tr>
-    <tr *ngFor = "let vendor of vendors | searchVendors:searchCriteria | sort: sortCriteria : sortOrder "> 
+    <tr *ngFor = "let vendor of vendors | searchVendor:searchCriteria | sort: sortCriteria : sortOrder "> 
       <td>{{vendor.id}}</td>
       <td>{{vendor.code}}</td>
       <td>{{vendor.name}}</td>

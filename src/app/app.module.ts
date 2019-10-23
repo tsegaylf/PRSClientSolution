@@ -19,6 +19,7 @@ import { VendorEditComponent } from './prs/vendor/vendor-edit/vendor-edit.compon
 import { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.component';
 import { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.component';
+import { SearchVendorPipe } from './core/pipes/search-vendor.pipe';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.compon
     VendorCreateComponent,
     VendorDetailComponent,
     VendorListComponent,
+    SearchVendorPipe,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

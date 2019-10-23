@@ -1,3 +1,27 @@
-<p>
-  vendor-detail works!
-</p>
+<app-menu></app-menu>
+
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">VENDOR DETAIL</span> 
+  </div>
+
+  <table class="table table-sm" *ngIf="vendor">
+    <tr><td>Id:</td><td>{{vendor.id}}</td></tr>
+    <tr><td>Code:</td><td>{{vendor.code}}</td></tr>
+    <tr><td>Name:</td><td>{{vendor.name}}</td></tr>
+    <tr><td>Address:</td><td>{{vendor.address}}</td></tr>
+    <tr><td>City:</td><td>{{vendor.city}}</td></tr>
+    <tr><td>State:</td><td>{{vendor.state}}</td></tr>
+    <tr><td>Zip:</td><td>{{vendor.zip}}</td></tr>
+    <tr><td>Phone:</td><td>{{vendor.phone}}</td></tr>
+    <tr><td>Email:</td><td>{{vendor.email}}</td></tr>
+  </table>
+
+  <button (click)="edit()" class="btn btn-primary btn-sm">EDIT</button> |
+  <button (click)="verify()" class="btn btn-primary btn-sm">DELETE</button> |
+  <span>
+    <button (click)="delete()" class="btn btn-primary btn-sm">VERIFY</button>
+  </span>
+
+</div>
