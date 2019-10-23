@@ -20,7 +20,7 @@
 
   <button (click)="edit()" class="btn btn-primary btn-sm">EDIT</button> |
   <button (click)="verify()" class="btn btn-primary btn-sm">DELETE</button> |
-  <span>
+  <span *ngIf="verifyDelete">
     <button (click)="delete()" class="btn btn-primary btn-sm">VERIFY</button>
   </span>
 
