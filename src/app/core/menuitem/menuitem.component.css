@@ -1,3 +1,15 @@
-.menuItem{
+li {
     display: inline-block;
+    text-align: center;
+}
+
+a{
+    text-decoration: nane;
+    color: rgb(15, 15, 15);
+    padding: 0 15px;
+}
+
+a:hover{
+    color: wheat;
+    background-color: crimson;
 }
