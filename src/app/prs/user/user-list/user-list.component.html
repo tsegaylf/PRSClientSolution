@@ -11,13 +11,13 @@
   <table class="table table-sm">
     <tr class="tableheader">
       <td>Id</td>
-      <td>Username</td>
+      <td> <a (click) ="sortBy('username')">Username</a></td>
       <td>Full Name</td>
       <td>Reviewer</td>
       <td>Admin</td>
       <td>Actions</td>
     </tr>
-    <tr *ngFor = "let user of users  | sort: 'username' : 'desc' "> 
+    <tr *ngFor = "let user of users  | sort: sortCriteria : sortOrder "> 
       <td>{{user.id}}</td>
       <td>{{user.username}}</td>
       <td>{{user.firstname}} {{user.lastname}}</td>
@@ -31,5 +31,4 @@
       </td>
     </tr>
   </table>
-
 </div>
