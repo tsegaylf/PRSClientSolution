@@ -10,6 +10,8 @@ import { User } from '../user.class';
 export class UserListComponent implements OnInit {
 
   users: User[] = [];
+  sortCriteria: string = "id";
+  sortOrder: string = "asc";
 
   constructor( private usersvc: UserService) { }
 

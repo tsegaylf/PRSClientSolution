@@ -17,7 +17,7 @@
       <td>Admin</td>
       <td>Actions</td>
     </tr>
-    <tr *ngFor = "let user of users">
+    <tr *ngFor = "let user of users  | sort: 'username' : 'desc' "> 
       <td>{{user.id}}</td>
       <td>{{user.username}}</td>
       <td>{{user.firstname}} {{user.lastname}}</td>
