@@ -5,7 +5,8 @@
     <span class="pagetitle">USER LIST</span> |
     <span class="createlink">
       <a routerLink="/users/create">CREATE</a>
-    </span>
+    </span> |
+    <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search">
   </div>
 
   <table class="table table-sm">
@@ -17,7 +18,7 @@
       <td><a (click) ="sortBy('isAdmin')">Admin</a></td>
       <td>Actions</td>
     </tr>
-    <tr *ngFor = "let user of users  | sort: sortCriteria : sortOrder "> 
+    <tr *ngFor = "let user of users | searchUsers:searchCriteria |sort: sortCriteria : sortOrder "> 
       <td>{{user.id}}</td>
       <td>{{user.username}}</td>
       <td>{{user.firstname}} {{user.lastname}}</td>

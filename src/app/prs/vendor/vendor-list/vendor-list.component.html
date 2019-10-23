@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">VENDOR LIST</span> |
+    <span class="createlink">
+      <a routerLink="/vendors/create">CREATE</a>
+    </span> |
+    <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search">
+  </div>
+
+  <table class="table table-sm">
+    <tr class="tableheader">
+      <td>Id</td>
+      <td>Code</td>
+      <td>Name</td>
+      <td>Address</td>
+      <td>Phone</td>
+      <td>Email</td>
+    </tr>
+    <tr *ngFor = "let vendor of vendors | searchVendors:searchCriteria | sort: sortCriteria : sortOrder "> 
+      <td>{{vendor.id}}</td>
+      <td>{{vendor.code}}</td>
+      <td>{{vendor.name}}</td>
+      <td>{{vendor.address}} {{vendor.city}} {{vendor.state}} {{vendor.zip}}</td>
+      <td>{{vendor.phone}}</td>
+      <td>{{vendor.email}}</td>
+      <td>
+        <span class="actions">
+          <a routerLink="/vendors/detail/{{vendor.id}}">DETAIL</a> |
+          <a routerLink="/vendors/edit/{{vendor.id}}">EDIT</a>
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
