@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './PRS/user/user.service';
+import { VendorService } from './PRS/vendor/vendor.service';
 
 @Component({
   selector: 'app-root',

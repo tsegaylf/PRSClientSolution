@@ -20,6 +20,10 @@ import { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.
 import { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.component';
 import { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.component';
 import { SearchVendorPipe } from './core/pipes/search-vendor.pipe';
+import { ProductListComponent } from './prs/product/product-list/product-list.component';
+import { ProductEditComponent } from './prs/product/product-edit/product-edit.component';
+import { ProductCreateComponent } from './prs/product/product-create/product-create.component';
+import { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -40,12 +44,19 @@ import { SearchVendorPipe } from './core/pipes/search-vendor.pipe';
     VendorDetailComponent,
     VendorListComponent,
     SearchVendorPipe,
+    ProductListComponent,
+    ProductEditComponent,
+    ProductCreateComponent,
+    ProductDetailComponent,
   ],
+
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
     AppRoutingModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

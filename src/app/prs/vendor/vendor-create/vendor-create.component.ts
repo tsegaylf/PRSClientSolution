@@ -28,6 +28,7 @@ export class VendorCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+  
   }
 
 }

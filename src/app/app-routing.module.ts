@@ -11,6 +11,10 @@ import { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.compon
 import { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './prs/vendor/vendor-edit/vendor-edit.component';
+import { ProductListComponent } from './prs/product/product-list/product-list.component';
+import { ProductCreateComponent } from './prs/product/product-create/product-create.component';
+import { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
+import { ProductEditComponent } from './prs/product/product-edit/product-edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/users/list', pathMatch: 'full'}, //initial route
@@ -24,6 +28,11 @@ const routes: Routes = [
   {path: 'vendors/create', component: VendorCreateComponent },
   {path: 'vendors/detail/:id', component: VendorDetailComponent},
   {path: 'vendors/edit/:id', component: VendorEditComponent },
+
+  {path: 'products/list', component: ProductListComponent }, 
+  {path: 'products/create', component: ProductCreateComponent },
+  {path: 'products/detail/:id', component: ProductDetailComponent},
+  {path: 'products/edit/:id', component: ProductEditComponent },
 
   {path: '**', component: FourOhFourComponent} //anything else
 ];
