@@ -7,6 +7,7 @@ const baseUrl = "http://localhost:54318/api/products";
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductService {
 
   list(): Observable<Product[]> {

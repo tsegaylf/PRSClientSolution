@@ -4,34 +4,35 @@
   <div class="header">
     <span class="pagetitle">PRODUCT LIST</span> |
     <span class="createlink">
-      <a routerLink="/users/create">CREATE</a>
+      <a routerLink="/products/create">CREATE</a>
     </span> |
     <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search">
   </div>
+
   <table class="table table-sm">
     <tr class="tableheader">
       <td>Id</td>
-      <td><a (click) ="sortBy('prtnbr')">PrtNbr</a></td>
+      <td><a (click) ="sortBy('prtNbr')">Part Number</a></td>
       <td><a (click) ="sortBy('name')">Product Name</a></td>
       <td><a (click) ="sortBy('price')">Price</a></td>
       <td><a (click) ="sortBy('unit')">Unit</a></td>
-      <td><a (click) ="sortBy('vendor name')">Vendor Name</a></td>
+      <td><a (click) ="sortBy('vendorid')">Vendor</a></td>
       <td>Actions</td>
     </tr>
-    <tr *ngFor = "let user of users | searchUsers:searchCriteria |sort: sortCriteria : sortOrder "> 
+    <tr *ngFor = "let user of users | searchUsers:searchCriteria"> 
       <td>{{product.id}}</td>
-      <td>{{product.prtnbr}}</td>
+      <td>{{product.prtNbr}}</td>
       <td>{{product.name}}</td>
       <td>{{product.price}}</td>
       <td>{{product.unit}}</td>
-      <td>{{product.vendor.name}}</td>
-
+      <td>{{product.vendorid}}</td>
       <td>
         <span class="actions">
-          <a routerLink="/users/detail/{{user.id}}">DETAIL</a> |
-          <a routerLink="/users/edit/{{user.id}}">EDIT</a>
+          <a routerLink="/products/detail/{{product.id}}">DETAIL</a> |
+          <a routerLink="/products/edit/{{product.id}}">EDIT</a>
         </span>
       </td>
     </tr>
   </table>
 </div>
+
