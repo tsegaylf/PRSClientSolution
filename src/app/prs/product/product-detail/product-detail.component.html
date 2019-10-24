@@ -4,5 +4,37 @@
   <div class="header">
     <span class="pagetitle">PRODUCT DETAIL</span> 
   </div>
+
+  <table class="table table-sm" *ngIf="product">
+    <tr>
+      <td>Id:</td>
+      <td>{{product.id}}</td>
+    </tr>
+    <tr>
+      <td>PartNbr:</td>
+      <td>{{product.prtnbr}}</td>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td>{{product.name}}</td>
+    </tr>
+    <tr>
+      <td>Price:</td>
+      <td>{{product.price}}</td>
+    </tr>
+    <tr>
+      <td>Unit:</td>
+      <td>{{product.unit}}</td>
+    </tr>
+    <tr>
+      <td>Vendor:</td>
+      <td>{{product.vendorid}}</td>
+    </tr>
+    </table>
+    <button (click)="edit()" class="btn btn-primary btn-sm">EDIT</button> |
+    <button (click)="verify()" class="btn btn-primary btn-sm">DELETE</button> |
+    <span *ngIf="verifyDelete">
+      <button (click)="delete()" class="btn btn-primary btn-sm">VERIFY</button>
+    </span>
   
 </div>

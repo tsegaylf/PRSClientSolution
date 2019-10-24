@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">REQUEST LIST</span> |
+    <span class="createlink">
+      <a routerLink="/requests/create">CREATE</a>
+    </span> |
+    <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search">
+  </div>
+
+  <table class="table table-sm">
+    <tr class="tableheader">
+      <td>Id</td>
+      <td><a (click) ="sortBy('description')">Description</a></td>
+      <td><a (click) ="sortBy('justification')">Description</a></td>
+      <td><a (click) ="sortBy('rejectionReason')">Rejection Reason</a></td>
+      <td><a (click) ="sortBy('delivaryMode')">Delivary Mode</a></td>
+      <td><a (click) ="sortBy('status')">Status</a></td>
+      <td><a (click) ="sortBy('total')">Total</a></td>
+      <td><a (click) ="sortBy('userId')">User</a></td>
+    </tr>
+    <tr *ngFor = "let request of requests |sort: sortCriteria : sortOrder ">
+      <td>{{request.id}}</td>
+      <td>{{request.description}}</td>
+      <td>{{request.justification}}</td>
+      <td>{{request.rejectionReason}}</td>
+      <td>{{request.delivaryMode}}</td>
+      <td>{{request.status}}</td>
+      <td>{{request.total}}</td>
+      <td>{{request.userId}}</td>
+      <td>
+          <span class="actions">
+            <a routerLink="/request/detail/{{request.id}}">DETAIL</a> |
+            <a routerLink="/requests/edit/{{request.id}}">EDIT</a>
+          </span>
+        </td>
+    </tr>
+
+  </table>
+
+</div>

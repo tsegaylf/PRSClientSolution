@@ -8,7 +8,7 @@
     </span> |
     <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search">
   </div>
-
+  
   <table class="table table-sm">
     <tr class="tableheader">
       <td>Id</td>
@@ -16,16 +16,16 @@
       <td><a (click) ="sortBy('name')">Product Name</a></td>
       <td><a (click) ="sortBy('price')">Price</a></td>
       <td><a (click) ="sortBy('unit')">Unit</a></td>
-      <td><a (click) ="sortBy('vendorid')">Vendor</a></td>
+      <td><a (click) ="sortBy('vendorId')">Vendor</a></td>
       <td>Actions</td>
     </tr>
-    <tr *ngFor = "let user of users | searchUsers:searchCriteria"> 
+    <tr *ngFor = "let product of products | searchUsers:searchCriteria |sort: sortCriteria : sortOrder "> 
       <td>{{product.id}}</td>
       <td>{{product.prtNbr}}</td>
       <td>{{product.name}}</td>
       <td>{{product.price}}</td>
       <td>{{product.unit}}</td>
-      <td>{{product.vendorid}}</td>
+      <td>{{product.vendorId}}</td>
       <td>
         <span class="actions">
           <a routerLink="/products/detail/{{product.id}}">DETAIL</a> |

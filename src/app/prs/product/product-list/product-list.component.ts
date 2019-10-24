@@ -12,7 +12,7 @@ import { Product } from '../product.class';
 export class ProductListComponent implements OnInit {
 
   products:Product[] = [];
-  sortCriteria: string = "name";
+  sortCriteria: string = "prtNbr";
   sortOrder: string = "asc";
 
   sortBy(prop: string): void {

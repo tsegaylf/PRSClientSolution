@@ -15,6 +15,11 @@ import { ProductListComponent } from './prs/product/product-list/product-list.co
 import { ProductCreateComponent } from './prs/product/product-create/product-create.component';
 import { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './prs/product/product-edit/product-edit.component';
+import { RequestListComponent } from './prs/request/request-list/request-list.component';
+import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
+import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
+import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/users/list', pathMatch: 'full'}, //initial route
@@ -33,6 +38,11 @@ const routes: Routes = [
   {path: 'products/create', component: ProductCreateComponent },
   {path: 'products/detail/:id', component: ProductDetailComponent},
   {path: 'products/edit/:id', component: ProductEditComponent },
+
+  {path: 'requests/list', component: RequestListComponent }, 
+  {path: 'requests/create', component: RequestCreateComponent },
+  {path: 'requests/detail/:id', component: RequestDetailComponent},
+  {path: 'requests/edit/:id', component: RequestEditComponent },
 
   {path: '**', component: FourOhFourComponent} //anything else
 ];
