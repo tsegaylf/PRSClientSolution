@@ -30,6 +30,7 @@ import { RequestEditComponent } from './prs/request/request-edit/request-edit.co
 import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
 import { SearchProductPipe } from './core/pipes/search-product.pipe';
 import { SearchRequestPipe } from './core/pipes/search-request.pipe';
+import { LoginComponent } from './prs/user/login/login.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { SearchRequestPipe } from './core/pipes/search-request.pipe';
     RequestCreateComponent,
     SearchProductPipe,
     SearchRequestPipe,
+    LoginComponent,
   ],
 
   imports: [

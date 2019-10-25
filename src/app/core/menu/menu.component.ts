@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
     {display: 'Requests', link: '/requests/list', tip: 'Request List'},
     {display: 'Reviews', link: '/requests/review/list', tip: 'Request to be Reviewed'},
     {display: 'About', link: '/about', tip: 'About ME'},
-    {display: 'Login/out', link: '/login', tip: 'Login'}
+    {display: 'Login/Out', link: '/login', tip: 'Login'}
   ];
 
   constructor() { }

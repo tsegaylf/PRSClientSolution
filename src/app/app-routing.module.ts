@@ -20,9 +20,13 @@ import { RequestCreateComponent } from './prs/request/request-create/request-cre
 import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
 
+import { LoginComponent } from './prs/user/login/login.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/users/list', pathMatch: 'full'}, //initial route
+
+  {path: 'login', component: LoginComponent },
 
   {path: 'users/list', component: UserListComponent }, //regular route
   {path: 'users/create', component: UserCreateComponent },
