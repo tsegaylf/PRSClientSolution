@@ -28,6 +28,8 @@ import { RequestListComponent } from './prs/request/request-list/request-list.co
 import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
 import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
+import { SearchProductPipe } from './core/pipes/search-product.pipe';
+import { SearchRequestPipe } from './core/pipes/search-request.pipe';
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import { RequestCreateComponent } from './prs/request/request-create/request-cre
     RequestDetailComponent,
     RequestEditComponent,
     RequestCreateComponent,
+    SearchProductPipe,
+    SearchRequestPipe,
   ],
 
   imports: [

@@ -21,7 +21,7 @@ export class VendorDetailComponent implements OnInit {
   ) { }
 
   edit(): void{
-    this.router.navigateByUrl(`/vendor/edit/${this.vendor.id}`)
+    this.router.navigateByUrl(`/vendors/edit/${this.vendor.id}`)
   }
 
   verify(): void {
@@ -32,7 +32,7 @@ export class VendorDetailComponent implements OnInit {
     this.vendorsvc.remove(this.vendor).subscribe(
       res => {
         console.log("This vendor removed", res);
-        this.router.navigateByUrl(`vendor/list`);
+        this.router.navigateByUrl(`vendors/list`);
       },
       err =>{
         console.error(err);
