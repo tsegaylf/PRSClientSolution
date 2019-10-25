@@ -4,18 +4,22 @@
 </header>
 
 <div>
+
   <table>
       <tr>
         <td>Username:</td>
         <td><input [(ngModel)]="username" type="text"></td>
       </tr>
+      
       <tr>
         <td>Password:</td>
         <td><input [(ngModel)]="password" type="password"></td>
       </tr>
   </table>
+
   <div>
-    <button (click)="userlogin()" color="primary">LOGIN</button>
+    <button (click)="login()" color="primary">LOGIN</button>
   </div>
+
 </div>
 
