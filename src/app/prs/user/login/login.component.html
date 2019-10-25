@@ -1,2 +1,21 @@
-<h2>LOGIN</h2>
+<header>
+  <h1>PRS</h1>
+  <h3>Purchase Request System</h3>
+</header>
+
+<div>
+  <table>
+      <tr>
+        <td>Username:</td>
+        <td><input [(ngModel)]="username" type="text"></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input [(ngModel)]="password" type="password"></td>
+      </tr>
+  </table>
+  <div>
+    <button (click)="userlogin()" color="primary">LOGIN</button>
+  </div>
+</div>
 

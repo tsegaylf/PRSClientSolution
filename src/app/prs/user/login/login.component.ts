@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../user.class';
+
 
 @Component({
   selector: 'app-login',
@@ -24,4 +26,5 @@ export class LoginComponent implements OnInit {
     }else {
       alert("Invalid credentials");
   }
+}
 }
