@@ -1,3 +1,46 @@
-<p>
-  request-edit works!
-</p>
+<app-menu></app-menu>
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">REQUEST EDIT</span> 
+  </div>
+
+  <table class="table table-sm">
+      <tr>
+        <td>Id:</td>
+        <td><input [(ngModel)]="request.id" type="number" disabled></td>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td><input [(ngModel)]="request.description" type="text"></td>
+      </tr>
+      <tr>
+          <td>Justification:</td>
+          <td>
+            <input [(ngModel)]="request.justification" type="text">
+          </td>
+        </tr>
+      <tr>
+        <td>Rejection Reason:</td>
+        <td><input [(ngModel)]="request.rejectionReason" type="text"></td>
+      </tr>
+      <tr>
+        <td>Delivary Mode:</td>
+        <td><input [(ngModel)]="request.delivaryMode" type="text"></td>
+      </tr>
+      <tr>
+        <td>Status:</td>
+        <td><input [(ngModel)]="request.status" type="text" disabled></td>
+      </tr>
+      <tr>
+        <td>Total:</td>
+        <td><input [(ngModel)]="request.total" type="text" disabled></td>
+      </tr>
+      <tr>
+        <td>User:</td>
+        <td><input [(ngModel)]="request.userId" type="text" disabled></td>
+      </tr>
+
+      </table>
+      <button (click)="save()" class="btn btn-primary btn-sm">SAVE</button>
+</div>

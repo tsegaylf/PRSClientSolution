@@ -5,8 +5,8 @@ export class Request {
     justification: string;
     rejectionReason: string;
     delivaryMode: string;
-    status: string;
-    total: string;
+    status: string = "New";
+    total: string = "0";
     userId: number = 0;
 
     constructor(){

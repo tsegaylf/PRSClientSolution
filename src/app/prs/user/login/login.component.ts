@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   user: User;
   username: string;
   password: string;
-  message: string = 'Ready to Login';
 
   constructor(
     private router : Router,
@@ -25,16 +24,36 @@ export class LoginComponent implements OnInit {
 
   ) { }
 
-  login(): void {
-    if(this.username == 'user.username' && this.password == 'user.admin'){
-      this.router.navigate(["/requests/list"]);
-    
-    }else {
-
-      alert("Retry: Username/Password combination is Invalid");
+  login(): void{
+    this.usersvc.login(this.username,this.password)
+    .subscribe(
+      resp =>{
+        console.log("login Sucessful!", resp);
+        let user = resp;
+        this.syssvc._loggedInUser = user;
+        this.router.navigateByUrl("requests/list");
+      },
+    )
+    err => {
       console.error("Login Failed.");
+      alert("Retry: Username/Password combination is Invalid");
     }
+
   }
+  // login(): void {
+  //   this.usersvc.login(this.username, this.password).subscribe(
+  //     res => 
+  //     (this.router.navigate(["/requests/list"])))
+
+  //   // if(this.username == 'user.username' && this.password == 'user.admin'){
+    //   this.router.navigate(["/requests/list"]);
+    
+    // }else {
+
+    //   alert("Retry: Username/Password combination is Invalid");
+    //   console.error("Login Failed.");
+    // }
+  //}
 
   ngOnInit() {
     
