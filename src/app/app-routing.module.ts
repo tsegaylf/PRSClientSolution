@@ -19,6 +19,8 @@ import { RequestListComponent } from './prs/request/request-list/request-list.co
 import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
 import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
+import { RequestLineDetailComponent } from './prs/requestline/request-line-detail/request-line-detail.component';
+import { RequestLineListComponent } from './prs/requestline/request-line-list/request-line-list.component';
 
 
 import { LoginComponent } from './prs/user/login/login.component';
@@ -48,6 +50,9 @@ const routes: Routes = [
   {path: 'requests/create', component: RequestCreateComponent },
   {path: 'requests/detail/:id', component: RequestDetailComponent},
   {path: 'requests/edit/:id', component: RequestEditComponent },
+
+  {path: 'requestlines/detail/:id', component: RequestLineDetailComponent },
+  {path: 'requestslines/list', component: RequestLineListComponent },
 
   {path: '**', component: FourOhFourComponent} //anything else
 ];
