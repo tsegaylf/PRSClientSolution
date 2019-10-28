@@ -14,13 +14,16 @@ export class SystemService {
   user : User = null;
   _loggedInUser: User = null;
 
-  // checkLogin(): void {
-  //   if (!this.isUseroggedIn) {this.router.navigateByUrl("/login");}
-  // }
+  checkLogin(): void {
+    if (!this.isUseroggedIn) {this.router.navigateByUrl("/login");}
+    // if(this.user == null)
+    // {this.router.navigateByUrl("/login");}
 
-  // get isUseroggedIn(): boolean{return this._loggedInUser ! =null}
+  }
 
-  // set loggedInUser(user: User) {this._loggedInUser = user; console.log ("logged in:, this.loggedInUser")}
+  get isUseroggedIn(): boolean{return this._loggedInUser ! =null}
+
+  set loggedInUser(user: User) {this._loggedInUser = user; console.log ("logged in:, this.loggedInUser")}
 
 
   // get baseUrl(): string {return baseUrl; }

@@ -5,6 +5,7 @@ import { SystemService } from '../../system.service';
 
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
+import { User } from '../../user/user.class';
 
 @Component({
   selector: 'app-request-create',
@@ -14,6 +15,7 @@ import { Request } from '../request.class';
 export class RequestCreateComponent implements OnInit {
 
   request: Request = new Request();
+  user = User;
 
   constructor(
     private router: Router,
@@ -31,10 +33,9 @@ export class RequestCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.syssvc.getuser().id
-    // this.syssvc.checkLogin();
-    // this.request.userId = this.syssvc.loggedInUser.id;
-    // this.syssvc.loggedInUser.username = this.syssvc.loggedInUser.username;
+    this.syssvc.checkLogin();
+    this.request.userId = this.syssvc.loggedInUser.id;
+    this.syssvc.loggedInUser.username = this.syssvc.loggedInUser.username;
   }
 
 }
