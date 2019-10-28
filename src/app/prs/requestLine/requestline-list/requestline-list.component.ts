@@ -1,18 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
-import { RequestlineService } from '../requestline.service';
-import { RequestLine } from '../requestline.class';
+import { RequestlineService} from '../requestline.service';
+import { Requestline } from '../requestline.class';
 
 @Component({
-  selector: 'app-request-line-list',
-  templateUrl: './request-line-list.component.html',
-  styleUrls: ['./request-line-list.component.css']
+  selector: 'app-requestline-list',
+  templateUrl: './requestline-list.component.html',
+  styleUrls: ['./requestline-list.component.css']
 })
+export class RequestlineListComponent implements OnInit {
 
-export class RequestLineListComponent implements OnInit {
-
-  requestlines:RequestLine[] = [];
-  sortCriteria: string = "quantity";
+  requestlines:Requestline[] = [];
+  sortCriteria: string = "productId";
   sortOrder: string = "asc";
 
   sortBy(prop: string): void {
@@ -28,7 +26,7 @@ export class RequestLineListComponent implements OnInit {
     this.requestlinesvc.list().subscribe(
       requestlines => {
         this.requestlines = requestlines;
-        console.log("RequestLines", requestlines);
+        console.log("Requestlines", requestlines);
       },
       err => {
         console.error(err);

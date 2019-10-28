@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { ProductService } from '../product.service';
 import { Product } from '../product.class';
+import { Vendor } from '../../vendor/vendor.class';
 
 @Component({
   selector: 'app-product-create',
@@ -12,6 +13,7 @@ import { Product } from '../product.class';
 export class ProductCreateComponent implements OnInit {
 
   product: Product = new Product(); 
+  vendor: Vendor[] = [];
 
   constructor(
     private router: Router,

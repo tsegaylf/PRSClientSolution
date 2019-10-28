@@ -1,11 +1,11 @@
-export class RequestLine {
+export class Requestline {
 
-    id:number = 0;
+    id: number = 0;
     productId: number;
     requestId: number;
-    quantity: string;
+    quantity: number;
 
-    constructor() {
+    constructor (){
 
     }
 }

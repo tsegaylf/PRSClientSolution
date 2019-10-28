@@ -19,8 +19,9 @@ import { RequestListComponent } from './prs/request/request-list/request-list.co
 import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
 import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
-import { RequestLineDetailComponent } from './prs/requestline/request-line-detail/request-line-detail.component';
-import { RequestLineListComponent } from './prs/requestline/request-line-list/request-line-list.component';
+import { RequestlineListComponent } from './prs/requestline/requestline-list/requestline-list.component';
+import { RequestlineDetailComponent } from './prs/requestline/requestline-detail/requestline-detail.component';
+import { RequestlineEditComponent } from './prs/requestline/requestline-edit/requestline-edit.component';
 
 
 import { LoginComponent } from './prs/user/login/login.component';
@@ -51,8 +52,9 @@ const routes: Routes = [
   {path: 'requests/detail/:id', component: RequestDetailComponent},
   {path: 'requests/edit/:id', component: RequestEditComponent },
 
-  {path: 'requestlines/detail/:id', component: RequestLineDetailComponent },
-  {path: 'requestslines/list', component: RequestLineListComponent },
+  {path: 'requestlines/list', component: RequestlineListComponent }, 
+  {path: 'requestlines/detail/:id', component: RequestlineDetailComponent},
+  {path: 'requestlines/edit/:id', component: RequestlineEditComponent },
 
   {path: '**', component: FourOhFourComponent} //anything else
 ];

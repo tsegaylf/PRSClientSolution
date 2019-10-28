@@ -31,8 +31,9 @@ import { RequestCreateComponent } from './prs/request/request-create/request-cre
 import { SearchProductPipe } from './core/pipes/search-product.pipe';
 import { SearchRequestPipe } from './core/pipes/search-request.pipe';
 import { LoginComponent } from './prs/user/login/login.component';
-import { RequestLineListComponent } from './prs/requestLine/request-line-list/request-line-list.component';
-import { RequestLineDetailComponent } from './prs/requestLine/request-line-detail/request-line-detail.component';
+import { RequestlineListComponent } from './prs/requestline/requestline-list/requestline-list.component';
+import { RequestlineDetailComponent } from './prs/requestline/requestline-detail/requestline-detail.component';
+import { RequestlineEditComponent } from './prs/requestline/requestline-edit/requestline-edit.component';
 
 
 @NgModule({
@@ -64,8 +65,9 @@ import { RequestLineDetailComponent } from './prs/requestLine/request-line-detai
     SearchProductPipe,
     SearchRequestPipe,
     LoginComponent,
-    RequestLineListComponent,
-    RequestLineDetailComponent,
+    RequestlineListComponent,
+    RequestlineDetailComponent,
+    RequestlineEditComponent,
   ],
 
   imports: [

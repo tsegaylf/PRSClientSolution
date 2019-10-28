@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RequestLineDetailComponent } from './request-line-detail.component';
+import { RequestlineDetailComponent } from './requestline-detail.component';
 
-describe('RequestLineDetailComponent', () => {
-  let component: RequestLineDetailComponent;
-  let fixture: ComponentFixture<RequestLineDetailComponent>;
+describe('RequestlineDetailComponent', () => {
+  let component: RequestlineDetailComponent;
+  let fixture: ComponentFixture<RequestlineDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RequestLineDetailComponent ]
+      declarations: [ RequestlineDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RequestLineDetailComponent);
+    fixture = TestBed.createComponent(RequestlineDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
