@@ -11,7 +11,7 @@
 
   <table class="table table-sm">
     <tr class="tableheader">
-      <td>Id</td>
+      <td hidden>Id</td>
       <td>Code</td>
       <td>Name</td>
       <td>Address</td>
@@ -19,7 +19,7 @@
       <td>Email</td>
     </tr>
     <tr *ngFor = "let vendor of vendors | searchVendor:searchCriteria | sort: sortCriteria : sortOrder "> 
-      <td>{{vendor.id}}</td>
+      <td hidden>{{vendor.id}}</td>
       <td>{{vendor.code}}</td>
       <td>{{vendor.name}}</td>
       <td>{{vendor.address}} {{vendor.city}} {{vendor.state}} {{vendor.zip}}</td>

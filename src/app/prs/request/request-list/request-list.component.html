@@ -11,7 +11,7 @@
 
   <table class="table table-sm">
     <tr class="tableheader">
-      <td>Id</td>
+      <td hidden>Id</td>
       <td><a (click) ="sortBy('description')">Description</a></td>
       <!-- <td><a (click) ="sortBy('justification')">Justification</a></td>
       <td><a (click) ="sortBy('rejectionReason')">Rejection Reason</a></td>
@@ -22,7 +22,7 @@
       <td>Action</td>
     </tr>
     <tr *ngFor = "let request of requests |sort: sortCriteria : sortOrder ">
-      <td>{{request.id}}</td>
+      <td hidden>{{request.id}}</td>
       <td>{{request.description}}</td>
       <!-- <td>{{request.justification}}</td>
       <td>{{request.rejectionReason}}</td>

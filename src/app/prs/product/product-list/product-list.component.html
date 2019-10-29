@@ -11,7 +11,7 @@
   
   <table class="table table-sm">
     <tr class="tableheader">
-      <td>Id</td>
+      <td hidden>Id</td>
       <td><a (click) ="sortBy('prtNbr')">Part Number</a></td>
       <td><a (click) ="sortBy('name')">Product Name</a></td>
       <td><a (click) ="sortBy('price')">Price</a></td>
@@ -20,7 +20,7 @@
       <td>Actions</td>
     </tr>
     <tr *ngFor = "let product of products | searchUsers:searchCriteria |sort: sortCriteria : sortOrder "> 
-      <td>{{product.id}}</td>
+      <td hidden>{{product.id}}</td>
       <td>{{product.prtNbr}}</td>
       <td>{{product.name}}</td>
       <td>{{product.price | currency}}</td>

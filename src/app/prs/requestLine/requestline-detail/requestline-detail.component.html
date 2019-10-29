@@ -1,3 +1,37 @@
-<p>
-  requestline-detail works!
-</p>
+<app-menu></app-menu>
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">REQUEST LINE DETAIL</span> 
+  </div>
+
+  <table class="table table-sm" *ngIf="requestline">
+    <!-- <tr>
+      <td hidden>Id:</td>
+      <td hidden>{{requestline.id}}</td>
+    </tr>
+    <tr>
+      <td>Product:</td>
+      <td>{{line.product.name}}</td>
+    </tr>
+    <tr>
+      <td>Quantity:</td>
+      <td>{{line.quantity}}</td>
+    </tr>
+    <tr>
+      <td>Price:</td>
+      <td>{{line.product.price | currency}} </td>
+    </tr>
+    <tr>
+      <td>Subtotal:</td>
+      <td>{{line.product.price * line.quantity | currency}}</td>
+    </tr> -->
+
+    </table>
+    <button (click)="edit()" class="btn btn-primary btn-sm">EDIT</button> |
+    <button (click)="verify()" class="btn btn-primary btn-sm">DELETE</button> |
+    <span *ngIf="verifyDelete">
+      <button (click)="delete()" class="btn btn-primary btn-sm">VERIFY</button>
+    </span>
+  
+</div>

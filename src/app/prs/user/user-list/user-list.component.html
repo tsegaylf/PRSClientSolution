@@ -11,7 +11,7 @@
 
   <table class="table table-sm">
     <tr class="tableheader">
-      <td>Id</td>
+      <td hidden>Id</td>
       <td><a (click) ="sortBy('username')">Username</a></td>
       <td><a (click) ="sortBy('lastname')">Full Name</a></td>
       <td><a (click) ="sortBy('isReviewer')">Reviewer</a></td>
@@ -19,7 +19,7 @@
       <td>Actions</td>
     </tr>
     <tr *ngFor = "let user of users | searchUsers:searchCriteria |sort: sortCriteria : sortOrder "> 
-      <td>{{user.id}}</td>
+      <td hidden>{{user.id}}</td>
       <td>{{user.username}}</td>
       <td>{{user.firstname}} {{user.lastname}}</td>
       <td>{{user.isReviewer | bool}}</td>
