@@ -52,8 +52,8 @@ const routes: Routes = [
   {path: 'requests/detail/:id', component: RequestDetailComponent},
   {path: 'requests/edit/:id', component: RequestEditComponent },
 
-  {path: 'requestlines/list', component: RequestlineListComponent }, 
-  {path: 'requestlines/detail/:id', component: RequestlineDetailComponent},
+  {path: 'requestlines/list/:prid', component: RequestlineListComponent }, 
+  {path: 'requestlines/detail/:prid', component: RequestlineDetailComponent},
   {path: 'requestlines/edit/:id', component: RequestlineEditComponent },
 
   {path: '**', component: FourOhFourComponent} //anything else
