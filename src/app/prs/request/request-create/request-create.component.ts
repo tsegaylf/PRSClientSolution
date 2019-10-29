@@ -36,12 +36,16 @@ export class RequestCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.syssvc.checkLogin();
-    this.request.userId = this.syssvc.getuser().id;
-    this.syssvc.loggedInUser.username = this.syssvc.loggedInUser.username;
+    // this.syssvc.checkLogin();
+    this.user = this.syssvc.getuser();
     this.usersvc.list().subscribe(resp => {
       this.users = resp;
     })
+
+
+    // this.request.userId = this.syssvc.getuser().id;
+    // this.request.userId = this.request.userId;
+    // this.syssvc.loggedInUser.username = this.syssvc.loggedInUser.username;
 
     //this.syssvc.getuser().id;
     //this.syssvc.checkLogin();

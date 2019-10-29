@@ -12,7 +12,7 @@
       <td>Quantity</td>
       <td>Price</td>
       <td>Subtotal</td>
-      <td>Action</td>
+      <!-- <td>Action</td> -->
     </tr>
     <tr *ngFor = "let line of requestlines">
       <td hidden>{{line.id}}</td>
@@ -20,14 +20,16 @@
       <td>{{line.quantity}}</td>
       <td>{{line.product.price | currency}} </td>
       <td>{{line.product.price * line.quantity | currency}}</td>
-      <td>
+      <!-- <td>
           <span class="actions">
             <a routerLink="/requestlines/detail">DELETE</a> |
             <a routerLink="/requestlines/edit">EDIT</a> 
           </span>
-        </td>
+        </td> -->
     </tr>
 
   </table>
+  <button>APPROVE</button> |
+  <button>REJECT</button>
 
 </div>

@@ -22,7 +22,7 @@
       <td>Action</td>
     </tr>
     <tr *ngFor = "let request of requests |sort: sortCriteria : sortOrder ">
-      <td hidden>{{request.id}}</td>
+      <td hidden><a >{{request.id}}</a></td>
       <td>{{request.description}}</td>
       <!-- <td>{{request.justification}}</td>
       <td>{{request.rejectionReason}}</td>

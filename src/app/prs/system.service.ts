@@ -11,19 +11,19 @@ const baseUrl = "http://localhost:54318/api/login";
 })
 export class SystemService {
 
-  user : User = null;
-  _loggedInUser: User = null;
+  user : User;
+  _loggedInUser: User;
 
   checkLogin(): void {
-    if (!this.isUseroggedIn) {this.router.navigateByUrl("/login");}
-    // if(this.user == null)
-    // {this.router.navigateByUrl("/login");}
+    //if (this.isUseroggedIn) {return this.router.navigateByUrl("/login");}
+    if(this.user == null)
+    {this.router.navigateByUrl("/login");}
 
   }
 
-  get isUseroggedIn(): boolean{return this._loggedInUser ! =null}
+  get isUseroggedIn(): boolean{return this._loggedInUser=null}
 
-  set loggedInUser(user: User) {this._loggedInUser = user; console.log ("logged in:, this.loggedInUser")}
+  set loggedInUser(user: User) {this._loggedInUser = user; console.log ("logged in:", this._loggedInUser)}
 
 
   // get baseUrl(): string {return baseUrl; }
@@ -35,8 +35,9 @@ export class SystemService {
   }
 
   getuser(): User {
-    return this._loggedInUser  }
+    return this._loggedInUser }
 
   constructor(
+    private http:HttpClient,
     private router: Router) { }
 }

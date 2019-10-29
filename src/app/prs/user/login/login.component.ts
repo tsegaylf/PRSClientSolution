@@ -14,8 +14,9 @@ import { User } from '../user.class';
 export class LoginComponent implements OnInit {
 
   user: User;
-  username: string;
-  password: string;
+  username: string = "";
+  password: string = "";
+  message: string = "";
 
   constructor(
     private router : Router,
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   login(): void{
-    this.usersvc.login(this.username,this.password)
+    this.usersvc.login(this.username, this.password)
     .subscribe(
       resp =>{
         console.log("login Sucessful!", resp);
@@ -56,6 +57,7 @@ export class LoginComponent implements OnInit {
   //}
 
   ngOnInit() {
+    this.syssvc.loggedInUser = null; //clears any logged in user
     
   }
   
