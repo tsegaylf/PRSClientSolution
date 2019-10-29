@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestlineService} from '../requestline.service';
 import { Requestline } from '../requestline.class';
+import { Request } from '../../request/request.class';
+import { User } from '../../user/user.class';
 
 @Component({
   selector: 'app-requestline-list',
@@ -9,6 +11,8 @@ import { Requestline } from '../requestline.class';
 })
 export class RequestlineListComponent implements OnInit {
 
+  request: Request;
+  user: User;
   requestlines:Requestline[] = [];
   sortCriteria: string = "productId";
   sortOrder: string = "asc";
