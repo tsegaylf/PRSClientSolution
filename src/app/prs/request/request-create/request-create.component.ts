@@ -16,7 +16,8 @@ import { UserService } from '../../user/user.service';
 export class RequestCreateComponent implements OnInit {
 
   request: Request = new Request();
-  user = User;
+  users: User [];
+  user: User;
 
   constructor(
     private router: Router,
@@ -35,10 +36,16 @@ export class RequestCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.syssvc.checkLogin();
+    this.request.userId = this.syssvc.getuser().id;
+    this.syssvc.loggedInUser.username = this.syssvc.loggedInUser.username;
+    this.usersvc.list().subscribe(resp => {
+      this.users = resp;
+    })
+
     //this.syssvc.getuser().id;
     //this.syssvc.checkLogin();
     //this.request.userId = this.syssvc.loggedInUser.id;
-    //this.syssvc.loggedInUser.username = this.syssvc.loggedInUser.username;
   }
 
 }
