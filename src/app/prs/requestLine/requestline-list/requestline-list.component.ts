@@ -3,6 +3,7 @@ import { RequestlineService} from '../requestline.service';
 import { Requestline } from '../requestline.class';
 import { Request } from '../../request/request.class';
 import { User } from '../../user/user.class';
+import { RequestService } from '../../request/request.service';
 
 @Component({
   selector: 'app-requestline-list',
@@ -24,9 +25,22 @@ export class RequestlineListComponent implements OnInit {
     this.sortCriteria = prop;
   }
 
-  constructor( private requestlinesvc: RequestlineService) { }
+  constructor( 
+    private requestlinesvc: RequestlineService,
+    private requestsvc: RequestService
+    ) { }
 
   ngOnInit() {
+    this.requestsvc.list().subscribe(
+      requests => {
+        this.requests = requests;
+        console.log("Requests", requests);
+      },
+      err => {
+        console.error(err);
+      }
+    )
+    
     this.requestlinesvc.list().subscribe(
       requestlines => {
         this.requestlines = requestlines;

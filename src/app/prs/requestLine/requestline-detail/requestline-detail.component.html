@@ -2,7 +2,7 @@
 <div class="component">
 
   <div class="header">
-    <span class="pagetitle">REQUEST LINE DETAIL</span> 
+    <span class="pagetitle">REQUESTLINE DETAIL</span> 
   </div>
 
   <table class="table table-sm" *ngIf="requestline">
@@ -12,19 +12,19 @@
     </tr>
     <tr>
       <td>Product:</td>
-      <td>{{product.name}}</td>
+      <td>{{requestline.product.name}}</td>
     </tr>
     <tr>
       <td>Quantity:</td>
-      <td>{{quantity}}</td>
+      <td>{{requestline.quantity}}</td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td>{{product.price | currency}} </td>
+      <td>{{requestline.product.price | currency}} </td>
     </tr>
     <tr>
       <td>Subtotal:</td>
-      <td>{{product.price * quantity | currency}}</td>
+      <td>{{requestline.product.price * requestline.quantity | currency}}</td>
     </tr>
 
     </table>

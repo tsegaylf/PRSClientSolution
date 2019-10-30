@@ -3,6 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { RequestlineService } from '../requestline.service';
 import { Requestline } from '../requestline.class';
+import { Request } from '../../request/request.class';
+import { User } from '../../user/user.class';
+import { RequestService } from '../../request/request.service';
 
 @Component({
   selector: 'app-requestline-detail',
@@ -17,6 +20,7 @@ export class RequestlineDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private requestsvc: RequestService,
     private requestlinesvc: RequestlineService
   ){ }
 
