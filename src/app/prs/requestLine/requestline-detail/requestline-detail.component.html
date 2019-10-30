@@ -2,36 +2,24 @@
 <div class="component">
 
   <div class="header">
-    <span class="pagetitle">REQUESTLINE DETAIL</span> 
+    <span class="pagetitle">REQUESTLINE CREATE</span> 
   </div>
-
-  <table class="table table-sm" *ngIf="requestline">
-    <tr>
-      <td hidden>Id:</td>
-      <td hidden>{{requestline.id}}</td>
-    </tr>
-    <tr>
-      <td>Product:</td>
-      <td>{{requestline.product.name}}</td>
-    </tr>
-    <tr>
-      <td>Quantity:</td>
-      <td>{{requestline.quantity}}</td>
-    </tr>
-    <tr>
-      <td>Price:</td>
-      <td>{{requestline.product.price | currency}} </td>
-    </tr>
-    <tr>
-      <td>Subtotal:</td>
-      <td>{{requestline.product.price * requestline.quantity | currency}}</td>
-    </tr>
-
-    </table>
-    <button (click)="edit()" class="btn btn-primary btn-sm">EDIT</button> |
-    <button (click)="verify()" class="btn btn-primary btn-sm">DELETE</button> |
-    <span *ngIf="verifyDelete">
-      <button (click)="delete()" class="btn btn-primary btn-sm">VERIFY</button>
-    </span>
   
+  <table class="table table-sm">
+    <tr>
+      <td hidden>Id</td>
+      <td hidden><input [(ngModel)]="requestline.id" type="text" disabled></td>
+    </tr>
+    <tr>
+      <td>Product</td>
+      <td><input [(ngModel)]="requestline.product.name" type="text"></td>
+    </tr>
+    <tr>
+      <td>Quantity</td>
+      <td><input [(ngModel)]="requestline.quantity" type="text"></td>
+    </tr>
+
+  </table>
+  <button (click)="save()" class="btn btn-primary btn-sm">SAVE</button>
 </div>
+

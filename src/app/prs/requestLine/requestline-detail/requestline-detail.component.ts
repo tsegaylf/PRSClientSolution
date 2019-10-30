@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { RequestlineService } from '../requestline.service';
 import { Requestline } from '../requestline.class';
 import { Request } from '../../request/request.class';
-import { User } from '../../user/user.class';
 import { RequestService } from '../../request/request.service';
 
 @Component({
@@ -18,39 +17,20 @@ export class RequestlineDetailComponent implements OnInit {
   verifyDelete: boolean = false;
 
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
     private requestsvc: RequestService,
     private requestlinesvc: RequestlineService
   ){ }
 
-  edit(): void {
-    this.router.navigateByUrl(`/requestlines/edit/${this.requestline.id}`);
-  }
-
-  verify(): void {
-   this.verifyDelete = !this.verifyDelete;
-  }
-
-  delete(): void {
-    this.requestlinesvc.remove(this.requestline).subscribe(
-      res => {console.log("Product change resp:", res); 
-    this.router.navigateByUrl('/requestlines/list');
+  save(): void{
+    this.requestlinesvc.create(this.requestline).subscribe(
+      res => {console.log("Res from Requestline create", res); 
+      this.router.navigateByUrl('/requestlines/list');
     }, 
-    err => {console.log(err);}
+      err => {console.log(err);}
     );
   }
 
   ngOnInit() {
-    let requestlineid = this.route.snapshot.params.id;
-    this.requestlinesvc.get(requestlineid).subscribe(
-    requestline => {
-      this.requestline =requestline;
-      console.log("Requestline:", requestline);
-    },
-    err => {
-      console.error(err);
-    });
   }
-
 }

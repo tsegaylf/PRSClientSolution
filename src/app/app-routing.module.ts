@@ -58,7 +58,7 @@ const routes: Routes = [
   {path: 'requests/edit/:id', component: RequestEditComponent },
 
   {path: 'requestlines/list', component: RequestlineListComponent }, 
-  {path: 'requestlines/detail/:id', component: RequestlineDetailComponent},
+  {path: 'requestlines/detail', component: RequestlineDetailComponent},
   {path: 'requestlines/edit/:id', component: RequestlineEditComponent },
 
   {path: 'requests/review/list', component: ReviewListComponent},
