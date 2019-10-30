@@ -12,7 +12,7 @@ import { RequestService } from '../../request/request.service';
 })
 export class RequestlineListComponent implements OnInit {
 
-  request: Request;
+ 
   user: User;
   requestlines:Requestline[] = [];
   sortCriteria: string = "request.status";
