@@ -24,6 +24,7 @@ import { RequestlineDetailComponent } from './prs/requestline/requestline-detail
 import { RequestlineEditComponent } from './prs/requestline/requestline-edit/requestline-edit.component';
 import { ReviewListComponent } from './prs/review/review-list/review-list.component';
 import { ReviewItemComponent } from './prs/review/review-item/review-item.component';
+import { HomeComponent } from './core/home/home.component';
 
 
 import { LoginComponent } from './prs/user/login/login.component';
@@ -33,6 +34,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/users/list', pathMatch: 'full'}, //initial route
 
   {path: 'login', component: LoginComponent },
+
+  {path: 'home', component: HomeComponent },
 
   {path: 'users/list', component: UserListComponent }, //regular route
   {path: 'users/create', component: UserCreateComponent },
@@ -58,8 +61,8 @@ const routes: Routes = [
   {path: 'requestlines/detail/:id', component: RequestlineDetailComponent},
   {path: 'requestlines/edit/:id', component: RequestlineEditComponent },
 
-  {path: 'reviews/list', component: ReviewListComponent},
-  {path: 'reviews/:id', component: ReviewItemComponent },
+  {path: 'requests/review/list', component: ReviewListComponent},
+  {path: 'requests/review/:id', component: ReviewItemComponent },
 
   {path: '**', component: FourOhFourComponent} //anything else
 ];

@@ -1,31 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Request } from '../request/request.class';
+import { Review } from '../review/review.class';
 
 const baseUrl= "http://localhost:54318/api/reviews";
 @Injectable({
   providedIn: 'root'
 })
 export class ReviewService {
-  list(): Observable<Request[]> {
-    return this.http.get(`${baseUrl}`) as Observable<Request[]>;
+  list(): Observable<Review[]> {
+    return this.http.get(`${baseUrl}`) as Observable<Review[]>;
   }
 
-  get(id: string): Observable<Request>{
-    return this.http.get(`${baseUrl}/${id}`) as Observable<Request>;
+  get(id: string): Observable<Review>{
+    return this.http.get(`${baseUrl}/${id}`) as Observable<Review>;
   }
 
-  create(request: Request): Observable<any> {
-    return this.http.post(`${baseUrl}`, request) as Observable<any>;
+  create(review: Review): Observable<any> {
+    return this.http.post(`${baseUrl}`, review) as Observable<any>;
   }
 
-  change(request: Request): Observable<any> {
-    return this.http.put(`${baseUrl}/${request.id}`, request) as Observable<any>;
+  change(review: Review): Observable<any> {
+    return this.http.put(`${baseUrl}/${review.id}`, review) as Observable<any>;
   }
 
-  remove(request: Request): Observable<any> {
-    return this.http.delete(`${baseUrl}/${request.id}`) as Observable<any>;
+  remove(review: Review): Observable<any> {
+    return this.http.delete(`${baseUrl}/${review.id}`) as Observable<any>;
   }
 
   constructor(private http: HttpClient) { }

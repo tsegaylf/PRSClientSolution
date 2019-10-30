@@ -3,9 +3,9 @@
 
   <div class="header">
     <span class="pagetitle">REQUEST LIST</span> |
-    <span class="createlink">
+    <!-- <span class="createlink">
       <a routerLink="/requests/create">CREATE</a>
-    </span> |
+    </span> | -->
     <!-- <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search"> -->
   </div>
 
@@ -29,6 +29,14 @@
 </div>
 
 <div>
+    <div class="header">
+        <span class="pagetitle">REQUESTLINE LIST</span> 
+        <span class="createlink">
+          <a routerLink="/requestlines/detail">CREATE</a>
+        </span> |
+        <!-- <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search"> -->
+      </div>
+
   <table class="table table-sm">
     <tr class="tableheader">
       <td hidden>Id</td>
@@ -46,8 +54,8 @@
       <td>{{line.product.price * line.quantity | currency}}</td>
       <td>
           <span class="actions">
-            <a routerLink="/requestlines/detail/{{line.id}}">DELETE</a> |
-            <a routerLink="/requestlines/edit/{{line.id}}">EDIT</a> 
+            <a routerLink="/requestlines/edit/{{line.id}}">EDIT</a> |
+            <button>DELETE</button>
           </span>
         </td>
     </tr>
