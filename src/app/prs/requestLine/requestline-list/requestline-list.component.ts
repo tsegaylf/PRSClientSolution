@@ -14,7 +14,7 @@ export class RequestlineListComponent implements OnInit {
   request: Request;
   user: User;
   requestlines:Requestline[] = [];
-  sortCriteria: string = "productId";
+  sortCriteria: string = "request.status";
   sortOrder: string = "asc";
 
   sortBy(prop: string): void {

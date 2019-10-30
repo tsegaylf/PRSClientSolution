@@ -2,9 +2,33 @@
 <div class="component">
 
   <div class="header">
-    <span class="pagetitle">REQUESTLINES LIST</span>
+    <span class="pagetitle">REQUEST LIST</span> |
+    <span class="createlink">
+      <a routerLink="/requests/create">CREATE</a>
+    </span> |
+    <!-- <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search"> -->
   </div>
 
+  <table class="table table-sm">
+    <tr class="tableheader">
+      <td hidden>Id</td>
+      <td><a (click) ="sortBy('description')">Description</a></td>
+      <td><a (click) ="sortBy('status')">Status</a></td>
+      <td><a (click) ="sortBy('total')">Total</a></td>
+      <td><a (click) ="sortBy('userId')">User</a></td>
+
+    </tr>
+    <tr *ngFor = "let request of requests">
+      <td hidden><a >{{request.id}}</a></td>
+      <td>{{request.description}}</td>
+      <td>{{request.status}}</td>
+      <td>{{request.total}}</td>
+      <td>{{request.userId}}</td>
+    </tr>
+  </table>
+</div>
+
+<div>
   <table class="table table-sm">
     <tr class="tableheader">
       <td hidden>Id</td>
@@ -22,14 +46,14 @@
       <td>{{line.product.price * line.quantity | currency}}</td>
       <!-- <td>
           <span class="actions">
-            <a routerLink="/requestlines/detail">DELETE</a> |
-            <a routerLink="/requestlines/edit">EDIT</a> 
+            <a routerLink="/requestlines/detail/{{line.id}}">DELETE</a> |
+            <a routerLink="/requestlines/edit/{{line.id}}">EDIT</a> 
           </span>
         </td> -->
     </tr>
 
   </table>
-  <button>APPROVE</button> |
-  <button>REJECT</button>
+  <!-- <button><a routerLink="/requests/edit/{{line.id}}">APPROVE</a></button> |
+  <button><a routerLink="/requests/edit/{{line.id}}">REJECT</a></button>  -->
 
 </div>

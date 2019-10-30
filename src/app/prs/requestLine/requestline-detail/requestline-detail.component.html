@@ -6,26 +6,26 @@
   </div>
 
   <table class="table table-sm" *ngIf="requestline">
-    <!-- <tr>
+    <tr>
       <td hidden>Id:</td>
       <td hidden>{{requestline.id}}</td>
     </tr>
     <tr>
       <td>Product:</td>
-      <td>{{line.product.name}}</td>
+      <td>{{product.name}}</td>
     </tr>
     <tr>
       <td>Quantity:</td>
-      <td>{{line.quantity}}</td>
+      <td>{{quantity}}</td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td>{{line.product.price | currency}} </td>
+      <td>{{product.price | currency}} </td>
     </tr>
     <tr>
       <td>Subtotal:</td>
-      <td>{{line.product.price * line.quantity | currency}}</td>
-    </tr> -->
+      <td>{{product.price * quantity | currency}}</td>
+    </tr>
 
     </table>
     <button (click)="edit()" class="btn btn-primary btn-sm">EDIT</button> |
