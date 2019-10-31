@@ -1,3 +1,48 @@
-<p>
-  review-item works!
-</p>
+<app-menu></app-menu>
+<div class="component">
+
+  <div class="header">
+    <span class="pagetitle">REVIEW LIST</span> 
+    <!-- <span class="createlink">
+      <a routerLink="/requests/create">CREATE</a>
+    </span> | -->
+    <!-- <input class="search" [(ngModel)] = "searchCriteria" type=text placeholder="Search"> -->
+  </div>
+
+  <!-- <table class="table table-sm">
+    <tr class="tableheader">
+      <td hidden>Id</td>
+      <td><a (click) ="sortBy('description')">Description</a></td>
+      <td><a (click) ="sortBy('status')">Status</a></td>
+      <td><a (click) ="sortBy('total')">Total</a></td>
+      <td><a (click) ="sortBy('userId')">User</a></td>
+
+    </tr>
+    <tr *ngFor = "let request of requests">
+      <td hidden><a >{{request.id}}</a></td>
+      <td>{{request.description}}</td>
+      <td>{{request.status}}</td>
+      <td>{{request.total}}</td>
+      <td>{{request.userId}}</td>
+    </tr>
+  </table> -->
+
+  <table class="table table-sm">
+    <tr>
+      <td hidden>Id</td>
+      <td hidden><input [(ngModel)]="requestline.id" type="text" disabled></td>
+    </tr>
+    <tr>
+      <td>Product</td>
+      <td><input [(ngModel)]="requestline.product.name" type="text"></td>
+    </tr>
+    <tr>
+      <td>Quantity</td>
+      <td><input [(ngModel)]="requestline.quantity" type="text"></td>
+    </tr>
+
+  </table>
+  
+  <span><button (click)="approve()" class="btn btn-primary">APPROVED</button> | </span>
+  <span><button (click)="reject()" class="btn btn-primary">REJECTED</button></span>
+</div>

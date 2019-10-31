@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Requestline } from '../../requestline/requestline.class';
 import { Request } from '../../request/request.class';
 import { RequestlineService } from '../../requestline/requestline.service';
@@ -11,13 +13,24 @@ import { RequestService } from '../../request/request.service';
 })
 export class ReviewListComponent implements OnInit {
 
-  request: Request;
-  requestline: Requestline;
+  requestline: Requestline[] =[];
+  requests:Request[] = [];
+  sortCriteria: string = "column";
+  sortOrder: string = "asc";
 
-  constructor(private requestsvc: RequestService, private requestlinesvc: RequestlineService) { }
+  sortBy(prop: string): void {
+    if(this.sortCriteria === prop){
+      this.sortOrder = this.sortOrder === 'desc' ? 'asc' : 'desc';
+    }
+    this.sortCriteria = prop;
+  }
 
-  //approve and not-approved function
+  constructor( 
+    private requestsvc: RequestService, 
+    private requestlinesvc: RequestlineService, 
+    private router: Router) {
 
+  }
 
   ngOnInit() {
   }
