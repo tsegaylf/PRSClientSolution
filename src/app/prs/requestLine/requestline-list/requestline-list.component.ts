@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestlineService} from '../requestline.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Requestline } from '../requestline.class';
 import { Request } from '../../request/request.class';
-import { User } from '../../user/user.class';
+import { RequestlineService} from '../requestline.service';
 import { RequestService } from '../../request/request.service';
 
 @Component({
@@ -13,7 +14,7 @@ import { RequestService } from '../../request/request.service';
 export class RequestlineListComponent implements OnInit {
 
  
-  user: User;
+  request: Request;
   requestlines:Requestline[] = [];
   sortCriteria: string = "request.status";
   sortOrder: string = "asc";
@@ -27,7 +28,9 @@ export class RequestlineListComponent implements OnInit {
 
   constructor( 
     private requestlinesvc: RequestlineService,
-    private requestsvc: RequestService
+    private requestsvc: RequestService,
+    private router: Router,
+    private route: ActivatedRoute
     ) { }
 
   ngOnInit() {

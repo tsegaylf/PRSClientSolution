@@ -18,6 +18,8 @@ export class RequestCreateComponent implements OnInit {
   request: Request = new Request();
   users: User [];
   user: User;
+  _loggedInName: User;
+  _loggedInUsername: string;
 
   constructor(
     private router: Router,
@@ -36,11 +38,14 @@ export class RequestCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.syssvc.checkLogin(this._loggedInName);
+    this.request.userId = this.syssvc._loggedInUser.id;
+    this._loggedInUsername = this.syssvc._loggedInUser.username;
     // this.syssvc.checkLogin();
-    this.user = this.syssvc.getuser();
-    this.usersvc.list().subscribe(resp => {
-      this.users = resp;
-    })
+    // this.user = this.syssvc.getuser();
+    // this.usersvc.list().subscribe(resp => {
+    //   this.users = resp;
+    
 
 
     // this.request.userId = this.syssvc.getuser().id;

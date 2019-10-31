@@ -32,6 +32,10 @@ export class ProductCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.vendorsvc.list().subscribe(
+    vendor => {
+    this.vendor = vendor});
   }
+
 
 }

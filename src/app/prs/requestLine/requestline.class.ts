@@ -1,9 +1,9 @@
 export class Requestline {
 
     id: number = 0;
-    productId: number;
-    requestId: number;
-    quantity: number;
+    productId: number = 0;
+    requestId: number = 0;
+    quantity: number = 1;
 
     constructor (){
 
