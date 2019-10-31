@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { SystemService } from '../../system.service';
-
-import { RequestService } from '../request.service';
 import { Request } from '../request.class';
 import { User } from '../../user/user.class';
+
+import { SystemService } from '../../system.service';
+import { RequestService } from '../request.service';
 import { UserService } from '../../user/user.service';
 
 @Component({
@@ -39,8 +39,8 @@ export class RequestCreateComponent implements OnInit {
 
   ngOnInit() {
     this.syssvc.checkLogin(this._loggedInName);
-    this.request.userId = this.syssvc._loggedInUser.id;
     this._loggedInUsername = this.syssvc._loggedInUser.username;
+    this.request.userId = this.syssvc._loggedInUser.id;
     // this.syssvc.checkLogin();
     // this.user = this.syssvc.getuser();
     // this.usersvc.list().subscribe(resp => {

@@ -55,7 +55,7 @@
       <td>
           <span class="actions">
             <a routerLink="/requestlines/edit/{{line.id}}">EDIT</a> |
-            <button>DELETE</button>
+            <button (click)="delete()" class="btn btn-primary">DELETE</button>
           </span>
         </td>
     </tr>

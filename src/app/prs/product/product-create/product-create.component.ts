@@ -14,7 +14,7 @@ import { VendorService } from '../../vendor/vendor.service';
 export class ProductCreateComponent implements OnInit {
 
   product: Product = new Product(); 
-  vendor: Vendor[] = [];
+  vendors: Vendor[] = [];
 
   constructor(
     private router: Router,
@@ -33,7 +33,13 @@ export class ProductCreateComponent implements OnInit {
 
   ngOnInit() {
     this.vendorsvc.list().subscribe(
-    vendor => {
-    this.vendor = vendor});
+      vendors => {
+        this.vendors = vendors;
+        console.log("Vendors", vendors);
+      },
+      err => {
+        console.error(err);
+      }
+    )
   }
 }
