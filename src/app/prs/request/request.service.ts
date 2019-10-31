@@ -31,5 +31,9 @@ export class RequestService {
     return this.http.delete(`${baseUrl}/${request.id}`) as Observable<any>;
   }
 
+  reject(request: Request): Observable <any> {
+    return this.http.put(`$this.baseUrl}/reject/${request.id}`, request) as Observable<any>;
+  }
+
   constructor(private http: HttpClient) { }
 }
