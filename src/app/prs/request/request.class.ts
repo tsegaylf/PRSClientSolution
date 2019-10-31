@@ -4,7 +4,7 @@ export class Request {
     description: string;
     justification: string;
     rejectionReason: string;
-    delivaryMode: string = "Pick-Up";
+    delivaryMode: string = "";
     status: string = "New";
     total: string = "0";
     userId: number;

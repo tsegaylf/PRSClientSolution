@@ -37,6 +37,7 @@ import { RequestlineEditComponent } from './prs/requestline/requestline-edit/req
 import { ReviewListComponent } from './prs/review/review-list/review-list.component';
 import { ReviewItemComponent } from './prs/review/review-item/review-item.component';
 import { HomeComponent } from './core/home/home.component';
+import { AboutComponent } from './core/about/about.component';
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import { HomeComponent } from './core/home/home.component';
     ReviewListComponent,
     ReviewItemComponent,
     HomeComponent,
+    AboutComponent,
   ],
 
   imports: [

@@ -24,8 +24,9 @@ import { RequestlineDetailComponent } from './prs/requestline/requestline-detail
 import { RequestlineEditComponent } from './prs/requestline/requestline-edit/requestline-edit.component';
 import { ReviewListComponent } from './prs/review/review-list/review-list.component';
 import { ReviewItemComponent } from './prs/review/review-item/review-item.component';
-import { HomeComponent } from './core/home/home.component';
 
+import { HomeComponent } from './core/home/home.component';
+import { AboutComponent } from './core/about/about.component';
 
 import { LoginComponent } from './prs/user/login/login.component';
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent },
 
   {path: 'home', component: HomeComponent },
+  {path: 'about', component: AboutComponent },
 
   {path: 'users/list', component: UserListComponent }, //regular route
   {path: 'users/create', component: UserCreateComponent },

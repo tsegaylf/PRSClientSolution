@@ -19,3 +19,14 @@ tr.tableheader a{
     font-size: 20px;
     padding: 20px;
 }
+
+.home {
+    align-content: center;
+    background-color: lightgrey;
+    width: 900px;
+    border: 7px solid #0080ff;
+    padding: 5px;
+    margin: 50px;
+
+}
+
