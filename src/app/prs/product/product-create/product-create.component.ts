@@ -36,6 +36,4 @@ export class ProductCreateComponent implements OnInit {
     vendor => {
     this.vendor = vendor});
   }
-
-
 }

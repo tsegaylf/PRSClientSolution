@@ -23,7 +23,7 @@
       <td>{{request.description}}</td>
       <td>{{request.status}}</td>
       <td>{{request.total}}</td>
-      <td>{{request.userId}}</td>
+      <td>{{request.user.username}}</td>
     </tr>
   </table>
 </div>
@@ -47,7 +47,7 @@
     </tr>
 
   </table>
-  <!-- <button><a routerLink="/review">APPROVE</a></button> |
-  <button><a routerLink="/review/item/{{line.id}}">REJECT</a></button>  -->
+  <span><button (click)="approve()" class="btn btn-primary">APPROVED</button> | </span>
+  <span><button (click)="reject()" class="btn btn-primary">REJECTED</button></span>
 
 </div>

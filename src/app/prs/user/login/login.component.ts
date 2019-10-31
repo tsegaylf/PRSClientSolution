@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
   //}
 
   ngOnInit() {
-    this.syssvc.loggedInUser = null; //clears any logged in user
+    this.syssvc._loggedInUser = null; //clears any logged in user
     
   }
   

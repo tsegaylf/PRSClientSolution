@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
-import { Requestline } from '../requestline.class';
 import { Request } from '../../request/request.class';
-import { RequestlineService} from '../requestline.service';
 import { RequestService } from '../../request/request.service';
+import { Requestline } from '../../requestline/requestline.class';
+import { RequestlineService } from '../../requestline/requestline.service';
 
 @Component({
   selector: 'app-requestline-list',
@@ -13,10 +12,9 @@ import { RequestService } from '../../request/request.service';
 })
 export class RequestlineListComponent implements OnInit {
 
- 
-  request: Request;
-  requestlines:Requestline[] = [];
-  sortCriteria: string = "request.status";
+  requestline: Requestline[] =[];
+  requests:Request[] = [];
+  sortCriteria: string = "status";
   sortOrder: string = "asc";
 
   sortBy(prop: string): void {
@@ -26,28 +24,13 @@ export class RequestlineListComponent implements OnInit {
     this.sortCriteria = prop;
   }
 
-  constructor( 
-    private requestlinesvc: RequestlineService,
-    private requestsvc: RequestService,
-    private router: Router,
-    private route: ActivatedRoute
-    ) { }
+  constructor( private requestsvc: RequestService, private requestlinesvc: RequestlineService) { }
 
   ngOnInit() {
     this.requestsvc.list().subscribe(
       requests => {
         this.requests = requests;
         console.log("Requests", requests);
-      },
-      err => {
-        console.error(err);
-      }
-    )
-    
-    this.requestlinesvc.list().subscribe(
-      requestlines => {
-        this.requestlines = requestlines;
-        console.log("Requestlines", requestlines);
       },
       err => {
         console.error(err);
